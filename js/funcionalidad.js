@@ -1,4 +1,4 @@
-function muestraMensaje() {
+function obtenerPueblosMagicos() {
     fetch('https://apirestpueblosmagicos-348922.uc.r.appspot.com/pueblosMagicos/obtenerPueblos/' + document.getElementById('entrada1').value)
         .then((respuesta) => {
             return respuesta.json();
