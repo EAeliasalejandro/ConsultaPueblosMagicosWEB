@@ -5,21 +5,10 @@ function obtenerPueblosMagicos() {
         }).then((respuesta) => {
             let pueblosMagicos = respuesta;
             let cadena = "";
-            console.log(respuesta);
-            if (pueblosMagicos instanceof Array) {
-                for (i = 0; i < pueblosMagicos.length; i++) {
-                    cadena += pueblosMagicos[i] + "\n";
-                }
-                document.getElementById('resultado1').value = cadena;
-            } /*else if (respuesta instanceof Object) {
-                cadena += String(respuesta);
-                document.getElementById('resultado1').value = cadena;
-                
-                console.log(typeof cadena);
-            }*/
 
-
-
-
+            for (i = 0; i < pueblosMagicos.length; i++) {
+                cadena += pueblosMagicos[i] + "\n";
+            }
+            document.getElementById('resultado1').value = cadena;
         })
 }
