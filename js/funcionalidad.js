@@ -5,17 +5,21 @@ function muestraMensaje() {
         }).then((respuesta) => {
             let pueblosMagicos = respuesta;
             let cadena = "";
-            if (typeof pueblosMagicos instanceof Array ) {
+            console.log(respuesta);
+            if (pueblosMagicos instanceof Array) {
                 for (i = 0; i < pueblosMagicos.length; i++) {
                     cadena += pueblosMagicos[i] + "\n";
                 }
                 document.getElementById('resultado1').value = cadena;
-            } else {
-                /*cadena += String(respuesta);
-                document.getElementById('resultado1').value = cadena;*/
-                console.log(typeof respuesta);
+            } /*else if (respuesta instanceof Object) {
+                cadena += String(respuesta);
+                document.getElementById('resultado1').value = cadena;
                 
-            }
+                console.log(typeof cadena);
+            }*/
+
+
+
 
         })
 }
