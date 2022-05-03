@@ -78,8 +78,8 @@
                         <h4>Escribe el estado</h4>
                         <div class="input-group flex-nowrap mb-3">
                             <span class="input-group-text" id="addon-wrapping">E</span>
-                            <input type="text" id="entrada1" class="form-control" placeholder="Estado" aria-label="Username"
-                                aria-describedby="addon-wrapping">
+                            <input type="text" id="entrada1" class="form-control" placeholder="Estado"
+                                aria-label="Username" aria-describedby="addon-wrapping">
                         </div>
                         <a class="btn btn-primary mb-3" onclick="obtenerPueblosMagicos()">Buscar</a>
                         <div class="form-floating">
@@ -96,17 +96,22 @@
         <div class="container px-4 px-lg-5">
             <!-- Aliniamientos -->
             <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/Maps.jpg"
-                        alt="..." /></div>
+                <div class="col-xl-8 col-lg-7">
+                    <!--<img class="img-fluid mb-3 mb-lg-0" src="assets/img/Maps.jpg" alt="..." />-->
+                    <div id="map" class="img-fluid mb-3 mb-lg-0"></div>
+                    <script 
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2CbwpV4LBTvpNC3awSx86WnSFTC37W7E" defer>
+                    </script>
+                </div>
                 <div class="col-xl-4 col-lg-5">
                     <div class="featured-text text-center text-lg-left">
                         <h4>Escribe el Pueblo Mágico</h4>
                         <div class="input-group flex-nowrap mb-3">
                             <span class="input-group-text" id="addon-wrapping">PM</span>
-                            <input type="text" class="form-control" placeholder="Pueblo Mágico" aria-label="Username"
-                                aria-describedby="addon-wrapping">
+                            <input type="text" class="form-control" id="entrada2" placeholder="Pueblo Mágico"
+                                aria-label="Username" aria-describedby="addon-wrapping">
                         </div>
-                        <a class="btn btn-primary">Buscar</a>
+                        <a class="btn btn-primary" onclick="obtenerDireccion()">Buscar</a>
                     </div>
                 </div>
             </div>
