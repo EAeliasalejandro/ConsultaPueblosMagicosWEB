@@ -96,11 +96,11 @@
         <div class="container px-4 px-lg-5">
             <!-- Aliniamientos -->
             <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                <div class="col-xl-8 col-lg-7">
+                <div class="col-xl-8 col-lg-7 position-relative">
                     <!--<img class="img-fluid mb-3 mb-lg-0" src="assets/img/Maps.jpg" alt="..." />-->
-                    <div id="map" class="img-fluid mb-3 mb-lg-0"></div>
+                    <div id="map" style="width:400px;height:400px;" class="position-absolute top-50 start-50 translate-middle"></div>
                     <script 
-                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2CbwpV4LBTvpNC3awSx86WnSFTC37W7E" defer>
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2CbwpV4LBTvpNC3awSx86WnSFTC37W7E">
                     </script>
                 </div>
                 <div class="col-xl-4 col-lg-5">
@@ -127,7 +127,8 @@
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
     <script src="js/funcionalidad.js"></script>
-    <!--<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>-->
+    <!-- Problema de eventos pasivos(Algo Nuevo)
+    <script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>-->
 </body>
 
 </html>

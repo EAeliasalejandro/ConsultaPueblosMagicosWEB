@@ -1,4 +1,4 @@
-
+//window.addEventListener("touchstart", func, {passive: true} );
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function

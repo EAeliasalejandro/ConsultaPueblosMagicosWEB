@@ -1,3 +1,4 @@
+
 function obtenerPueblosMagicos() {
     fetch('https://apirestpueblosmagicos-348922.uc.r.appspot.com/pueblosMagicos/obtenerPueblos/' + document.getElementById('entrada1').value)
         .then((respuesta) => {
@@ -18,19 +19,20 @@ function obtenerDireccion() {
             return respuesta.json();
         }).then((respuesta) => {
             let direccion = respuesta[0].split(",");
-            initMap(direccion);
+            var lat = parseFloat(direccion[0]);
+            var lng = parseFloat(direccion[1]);
+            console.log(lat +" "+lng);
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: new google.maps.LatLng(lat, lng),
+                zoom: 8,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+            var marker = new google.maps.Marker({
+                position: { lat: lat, lng: lng },
+                map: map,
+                title: document.getElementById('entrada2').value
+            });
 
         })
-}
-
-function initMap(direccion) {
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: parseFloat(direccion[0]), lng: parseFloat(direccion[1]) },
-        zoom: 13
-    });
-    var marker = new google.maps.Marker({
-        position: { lat: parseFloat(direccion[0]), lng: parseFloat(direccion[1]) },
-        map: map,
-        title: document.getElementById('entrada2').value
-    });
 }
