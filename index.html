@@ -98,8 +98,8 @@
             <!-- Aliniamientos -->
             <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
                 <div class="col-xl-8 col-lg-7">
-                    <!--<img class="img-fluid mb-3 mb-lg-0" src="assets/img/Maps.jpg" alt="..." />-->
-                    <div id="map" style="width:400px;height:400px;" class=" img-fluid mb-3 mb-lg-0"></div>
+                    <!--;-->
+                    <div id="map" style="width:400px;height:400px" class= "img-fluid mb-3 mb-lg-0"></div>
                     <script 
                         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2CbwpV4LBTvpNC3awSx86WnSFTC37W7E">
                     </script>
@@ -112,7 +112,8 @@
                             <input type="text" class="form-control" id="entrada2" placeholder="Pueblo Mágico"
                                 aria-label="Username" aria-describedby="addon-wrapping">
                         </div>
-                        <a class="btn btn-primary" onclick="obtenerDireccion()">Buscar</a>
+                        <a class="btn btn-primary  mb-3" onclick="obtenerDireccion()">Buscar</a>
+                        <div id="error"></div>
                     </div>
                 </div>
             </div>
