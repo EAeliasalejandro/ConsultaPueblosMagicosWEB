@@ -21,6 +21,17 @@ function obtenerDireccion() {
             // Eliminando todos los hijos de un elemento
             var element = document.getElementById("error");
             var element2 = document.getElementById("map");
+
+            var aliniamientos = document.getElementById("aliniamientos");
+            var imagenBorrarExiste = !!document.querySelector("#imagenBorrar");
+            var imagenBorrar = document.querySelector("#imagenBorrar");
+            if (imagenBorrarExiste == true) {
+                aliniamientos.removeChild(imagenBorrar);
+                element2.style.display = "block"; // Mostrar
+                element2.style = "width:400px;height:400px;"; // tamaño
+            }
+
+
             while (element2.firstChild) {
                 element2.removeChild(element2.firstChild);
             }
@@ -49,8 +60,8 @@ function generarMapa(respuesta) {
     let direccion = respuesta[0].split(",");
     var lat = parseFloat(direccion[0]);
     var lng = parseFloat(direccion[1]);
-    console.log(lat + " " + lng);
-    document.getElementById('map')
+    //var mapa = document.getElementById('map');
+
     var map = new google.maps.Map(document.getElementById('map'), {
         center: new google.maps.LatLng(lat, lng),
         zoom: 8,
